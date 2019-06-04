@@ -54,7 +54,7 @@ module "network_firewall" {
   version = "0.1.5"
 
   description = "singh demo firewall rules"
-  name = "singh demo firewall rule - allow port 80"
+  name = "singh demo firewall rule allow port 80"
   network = "${module.network.self_link}"
   ports = [80]
   protocol = "TCP"
