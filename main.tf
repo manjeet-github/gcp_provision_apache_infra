@@ -45,7 +45,7 @@ module "compute_instance" {
   disk_image = "${var.compute_instance_disk_image}"
   disk_size = "${var.compute_instance_disk_size}"
   machine_type = "${var.compute_instance_machine_type}"
-  name_prefix = "singh-demo"
+  name_prefix = "singh1-demo"
   subnetwork = "${module.network_subnet.self_link}"
 }
 
@@ -53,8 +53,8 @@ module "network_firewall" {
   source  = "app.terraform.io/acme-singh/network-firewall/google"
   version = "0.1.5"
 
-  description = "singh demo firewall rules"
-  name = "singhdemofirewallrule-allow-port-80"
+  description = "singh1 demo firewall rules"
+  name = "singh1demofirewallrule-allow-port-80"
   network = "${module.network.self_link}"
   ports = [80]
   protocol = "TCP"
@@ -65,9 +65,9 @@ module "network_subnet" {
   source  = "app.terraform.io/acme-singh/network-subnet/google"
   version = "0.1.2"
 
-  description = "Singh Customer Demo Subnet"
+  description = "Singh1 Customer Demo Subnet"
   ip_cidr_range = "172.16.0.0/16"
-  name = "singh-demo-subnet"
+  name = "singh1-demo-subnet"
   vpc = "${module.network.self_link}"
 }
 
@@ -76,8 +76,8 @@ module "network" {
   version = "0.1.3"
 
   auto_create_subnetworks = "false"
-  description = "Singh Demo Network on GCP"
-  name = "singh-demo-network"
+  description = "Singh1 Demo Network on GCP"
+  name = "singh1-demo-network"
 }
 
 
