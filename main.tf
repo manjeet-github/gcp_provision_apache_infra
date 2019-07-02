@@ -1,4 +1,4 @@
-// Terraform  Variables
+// Terraform Variables
 variable "gcp_credentials" {
   description = "GCP credentials needed by google provider"
 }
