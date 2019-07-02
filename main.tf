@@ -41,7 +41,7 @@ module "compute_instance" {
   source  = "app.terraform.io/acme-singh/compute-instance/google"
   version = "0.1.3"
 
-  compute_instance_count = "${var.compute_instance_count}"
+  instance_count = "${var.compute_instance_count}"
   disk_image = "${var.compute_instance_disk_image}"
   disk_size = "${var.compute_instance_disk_size}"
   machine_type = "${var.compute_instance_machine_type}"
