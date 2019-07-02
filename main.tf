@@ -83,7 +83,7 @@ module "network" {
 
 // -------------------------------------------------------------------
 
-// Terraform outputs
+// Terraform  outputs
 output "network_name" {
   value = "${module.network.name}"
 }
