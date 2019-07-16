@@ -100,3 +100,5 @@ output "compute_instance_addresses" {
   value = "${module.compute_instance.addresses}"
 }  
   
+
+
